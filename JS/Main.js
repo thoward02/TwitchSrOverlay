@@ -2,7 +2,7 @@ function Boot(){
   CONFIG = {
     "BTagUsername" : "Slashrrr",
     "BTagUserId"   : "1360",
-    "UpdateRate"   : 1000
+    "UpdateRate"   : 3000
   }
 
   //Create app
