@@ -1,8 +1,25 @@
 #App{
   width: 20%;
   height: 20%;
+  font-family: Roboto;
+}
 
+#App-Header{
+  text-align: center;
   background-color: grey;
 
+}
 
+#Table-WL-Header{
+  width: 100%;
+  background-color: grey;
+  text-align: left;
+}
+
+#WL-Header-Wins{
+  width: 50%;
+}
+
+#WL-Header-Losses{
+  width: 50%;
 }
