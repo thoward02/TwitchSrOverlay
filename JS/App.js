@@ -1,9 +1,5 @@
 class App{
-  constructor(SRElem, WLElem, BTagUsername, BTagUserId, UpdateRate){
-    //Setup HTML Elems
-    this.SRElem = SRElem;
-    this.WLElem = WLElem;
-
+  constructor(BTagUsername, BTagUserId, UpdateRate){
     //Setup user id
     this.BTagUsername = BTagUsername;
     this.BTagUserId = BTagUserId;
@@ -11,6 +7,17 @@ class App{
     //Misc
     this.UpdateRate = UpdateRate;
     this.Interval   = null;
+
+    //Stats
+    this.SessionStart = {
+      "Tank"    : null,
+      "DPS"     : null,
+      "Support" : null,
+
+      "Win"     : null,
+      "Losses"  : null,
+    };
+
 
   }
 
@@ -30,13 +37,36 @@ class App{
     //Fetch data
     let Data = JSON.parse(this.responseText)
 
-    let Sr     = Data.rating;
+    let Sr     = Data.ratings;
     let Wins   = Data.competitiveStats.games.won;
     let Losses = Data.competitiveStats.games.played - Data.competitiveStats.games.won;
 
-    //Update
-    window.App.SRElem.innerHTML = Sr;
-    window.App.WLElem.innerHTML = "W: " + Wins + "<br>L: " + Losses;
+    //Fetch HTML
+    let WinsElem   = document.getElementById("WL-Wins");
+    let LossesElem = document.getElementById("WL-Losses");
+
+    let TankStarting = document.getElementById("TankSr-Starting");
+    let TankCurrent  = document.getElementById("TankSr-Current");
+
+    let DPSStarting = document.getElementById("DPSSr-Starting");
+    let DPSCurrent  = document.getElementById("DPSSr-Current");
+
+    let SupportStarting = document.getElementById("SupportSr-Starting");
+    let SupportCurrent  = document.getElementById("SupportSr-Current");
+
+    //Update data
+    WinsElem.innerHTML   = Wins;
+    LossesElem.innerHTML = Losses;
+
+    TankStarting.innerHTML = window.App.SessionStart.Tank;
+    TankCurrent.innerHTML = Sr[0].level;
+
+    DPSStarting.innerHTML = window.App.SessionStart.DPS;
+    DPSCurrent.innerHTML = Sr[1].level;
+
+    SupportStarting.innerHTML = window.App.SessionStart.Support;
+    SupportCurrent.innerHTML = Sr[2].level;
+
   }
 
 

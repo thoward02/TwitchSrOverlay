@@ -1,13 +1,52 @@
 <html>
   <head>
     <title>Farm uwu</title>
+    <!-- Script -->
     <script src="JS/App.js"></script>
     <script src="JS/Main.js"></script>
+
+    <!-- Stylings -->
+   <link rel="stylesheet" href="CSS/Main.css">
   </head>
 
   <body>
-    <div id="Sr"></div>
-    <div id="WL"></div>
+    <div id="App">
+      <div id="App-Header">Stats</div>
+      <div id="App-Body">
+        <table id="Body-Table">
+          <tr id="Table-WL-Header">
+            <td id="WL-Header-Wins">Wins</td>
+            <td id="WL-Header-Losses">Losses</td>
+          </tr>
+          <tr id="Table-WL">
+            <td id="WL-Wins"></td>
+            <td id="WL-Losses"></td>
+          </tr>
+
+          <tr id="Table-Sr-Header">
+            <td id="WL-Header-Wins">Starting</td>
+            <td id="WL-Header-Losses">Current</td>
+          </tr>
+
+          <tr id="Table-TankSr">
+            <td id="TankSr-Title">Tanks</td>
+            <td id="TankSr-Starting"></td>
+            <td id="TankSr-Current"></td>
+          </tr>
+          <tr id="Table-DPSSr">
+            <td id="DPSSr-Title">DPS</td>
+            <td id="DPSSr-Starting"></td>
+            <td id="DPSSr-Current"></td>
+          </tr>
+          <tr id="Table-SupportSr">
+            <td id="SupportSr-Title">Support</td>
+            <td id="SupportSr-Starting"></td>
+            <td id="SupportSr-Current"></td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
   </body>
 
 </html>
