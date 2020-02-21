@@ -100,17 +100,17 @@ class App{
       }
 
       //Fetch HTML
-      let WinsElem   = document.getElementById("WL-Wins");
-      let LossesElem = document.getElementById("WL-Losses");
+      let WinsElem   = document.getElementById("WL-Body-Won");
+      let LossesElem = document.getElementById("WL-Body-Loss");
 
-      let TankStarting = document.getElementById("TankSr-Starting");
-      let TankCurrent  = document.getElementById("TankSr-Current");
+      let TankStarting = document.getElementById("SR-Tank-SR");
+      let TankCurrent  = document.getElementById("SR-Tank-SR");
 
-      let DPSStarting = document.getElementById("DPSSr-Starting");
-      let DPSCurrent  = document.getElementById("DPSSr-Current");
+      let DPSStarting = document.getElementById("SR-DPS-SR");
+      let DPSCurrent  = document.getElementById("SR-DPS-SR");
 
-      let SupportStarting = document.getElementById("SupportSr-Starting");
-      let SupportCurrent  = document.getElementById("SupportSr-Current");
+      let SupportStarting = document.getElementById("SR-Support-SR");
+      let SupportCurrent  = document.getElementById("SR-Support-SR");
 
       //Update data
       WinsElem.innerHTML   = window.App.WLStats.Wins;
