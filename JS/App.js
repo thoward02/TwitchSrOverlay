@@ -104,26 +104,20 @@ class App{
       let LossesElem = document.getElementById("WL-Body-Loss");
 
       let TankStarting = document.getElementById("SR-Tank-SR");
-      let TankCurrent  = document.getElementById("SR-Tank-SR");
 
       let DPSStarting = document.getElementById("SR-DPS-SR");
-      let DPSCurrent  = document.getElementById("SR-DPS-SR");
 
       let SupportStarting = document.getElementById("SR-Support-SR");
-      let SupportCurrent  = document.getElementById("SR-Support-SR");
 
       //Update data
       WinsElem.innerHTML   = window.App.WLStats.Wins;
       LossesElem.innerHTML =   window.App.WLStats.Losses;
 
-      TankStarting.innerHTML = window.App.SessionStart.Tank;
-      TankCurrent.innerHTML = Sr[0].level;
+      TankStarting.innerHTML = window.App.SessionStart.Tank - Sr[0].level;
 
-      DPSStarting.innerHTML = window.App.SessionStart.DPS;
-      DPSCurrent.innerHTML = Sr[1].level;
+      DPSStarting.innerHTML = window.App.SessionStart.DPS - Sr[1].level;
 
-      SupportStarting.innerHTML = window.App.SessionStart.Support;
-      SupportCurrent.innerHTML = Sr[2].level;
+      SupportStarting.innerHTML = window.App.SessionStart.Support - Sr[2].level;
     }
 
 
