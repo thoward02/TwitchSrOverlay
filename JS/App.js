@@ -113,11 +113,11 @@ class App{
       WinsElem.innerHTML   = window.App.WLStats.Wins;
       LossesElem.innerHTML =   window.App.WLStats.Losses;
 
-      TankStarting.innerHTML = window.App.SessionStart.Tank - Sr[0].level;
+      TankStarting.innerHTML =  Sr[0].level + " (" + (window.App.SessionStart.Tank - Sr[0].level) + ")";
 
-      DPSStarting.innerHTML = window.App.SessionStart.DPS - Sr[1].level;
+      DPSStarting.innerHTML = Sr[1].level + " (" + (window.App.SessionStart.DPS - Sr[1].level) + ")";
 
-      SupportStarting.innerHTML = window.App.SessionStart.Support - Sr[2].level;
+      SupportStarting.innerHTML = Sr[2].level + " (" + (window.App.SessionStart.Support - Sr[2].level) + ")";
     }
 
 

@@ -1,7 +1,7 @@
 function Boot(){
   CONFIG = {
-    "BTagUsername" : "Slashrrr",
-    "BTagUserId"   : "1360",
+    "BTagUsername" : "Appa",
+    "BTagUserId"   : "11442",
     "UpdateRate"   : 3000
   }
 

@@ -1,32 +1,33 @@
 #App{
   width: 100%;
-  height: 100%;
-  font-family: Roboto;
+  height: 90%;
+  font-family: BigNood;
+  font-size: 20px;
 
-  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
 
 }
 
 #App-Header{
   width: 100%;
-  height: 10%;
-  padding-top: 2.5%;
+  height: 7%;
   text-align: center;
 
+  font-size: 30px;
+
   color: white;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
 
 }
 
 #App-Body{
   width:  100%;
-  height: 80%;
   border: none;
 }
 
 #Body-Stats{
   width: 100%;
-  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 /**
@@ -34,8 +35,7 @@
 **/
 
 #Stats-WL{
-  height: 20%;
-  width: 100%;
+  height: 10%;
 
   padding-top: 2.5%;
 
@@ -46,6 +46,7 @@
 }
 
 .WL-Stats-Elem{
+  height: 10%;
   width: 50%;
   text-align: center;
 }
@@ -57,7 +58,6 @@
 
 #Stats-SR{
   width: 100%;
-  height: 80%;
 }
 
 
@@ -69,12 +69,11 @@
 
 #SR-Body{
   width: 100%;
-  height: 80%;
 }
 
 .Stats-Row{
   width: 100%;
-  height: 30%;
+  height: 10%;
 
   display: flex;
 }
@@ -95,4 +94,9 @@
 body{
   margin: 0;
 
+}
+
+@font-face {
+    src: url("Assets/big_noodle_titling.ttf");
+    font-family: BigNood;
 }
